@@ -22,3 +22,8 @@ The EEPROM is located directly above the APU, see `Picture 1`.
 * Content of `/proc/cpuinfo`: [Link](dumps/cpuinfo.txt)
 * Output of the `cpuid` utility by Todd Allen: [Link](dumps/cpuid.txt)
 * Output of the `lspci -v`: [Link](dumps/lspci.txt)
+
+# USB devices
+
+* Output of `lsusb -t -v`: [Link](usb/tree.txt)
+* Output of `lsusb -v -d 045e:028e`: [Link](usb/045e_028e.txt)
