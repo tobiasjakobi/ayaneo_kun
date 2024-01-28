@@ -16,3 +16,9 @@ Some pictures of the Kun's circuit board.
 The vendor/manufacturer of the EEPROM is `Winbond`, the product name is `W25Q256JWPQ`. Size is `32MiB` and interface is `SPI`.
 
 The EEPROM is located directly above the APU, see `Picture 1`.
+
+## Information dumps
+
+* Content of `/proc/cpuinfo`: [Link](dumps/cpuinfo.txt)
+* Output of the `cpuid` utility by Todd Allen: [Link](dumps/cpuid.txt)
+* Output of the `lspci -v`: [Link](dumps/lspci.txt)
