@@ -27,3 +27,4 @@ The EEPROM is located directly above the APU, see `Picture 1`.
 
 * Output of `lsusb -t -v`: [Link](usb/tree.txt)
 * Output of `lsusb -v -d 045e:028e`: [Link](usb/045e_028e.txt)
+* Output of `udevadm info -a -p /sys/bus/usb/devices/1-4.1:1.0`: [Link](usb/xbox360_controller.txt)
