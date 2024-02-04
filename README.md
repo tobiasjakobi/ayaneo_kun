@@ -64,3 +64,30 @@ In fact this behaviour is not unique to this firmware: [Link](https://lore.kerne
 A workaround consists of immediately opening the event device of controller and to keep it open. On the kernel driver level this results in periodic USB transfers to query button and other states. Due to these transfer happening several times each second the firmware watchdog is happy and keeps the device alive.
 
 It is unclear why the firmware implements this behaviour, in particular because it is detrimental to powersaving. Also it is not known if the problem also appears on Windows. The kernel driver on Windows might be implemented differently, e.g. it could request periodic USB transfer regardless if the input device is used or not.
+
+## Problematic hardware
+
+CS9711 fingerprint sensor by `Chipsailing Technology Co., Ltd.`
+
+* USB vendor ID `2541`, and product ID `0236`
+* no Linux kernel or userspace driver available
+* no reverse engineering projects known
+
+Ryzen AI
+
+* AI accelerator integrated in the AMD 7840U APU
+* Driver stack in development: [Link](https://github.com/amd/xdna-driver)
+* Depends on IOMMU SVA patches: [Link](https://lore.kernel.org/linux-iommu/20231016104351.5749-1-vasant.hegde@amd.com/)
+
+Bosch IMU
+
+* currently unclear if the device houses a `BMI160` or a `BMI260`
+* according to ACPI table information the IMU should be a `BMI160` (supported current Linux stable)
+* probing the IMU fails, indicating that the ACPI information might be bogus
+* out-of-tree kernel driver for the `BMI260` available: [Link](https://github.com/hhd-dev/bmi260)
+
+CPU core management
+
+* core scheduling on latest Linux stable might no be optimal
+* P-state preferred core support is slated for Linux `6.9`: [Link](https://lore.kernel.org/linux-acpi/CAJZ5v0hRk3tME7yeC+1r0RM4-oPPrnSu2=JCsOshBbJp_Nq2Hg@mail.gmail.com/)
+* Core performance boost (CPB) support is currently in review: [Link](https://lore.kernel.org/linux-pm/cover.1706255676.git.perry.yuan@amd.com/)
