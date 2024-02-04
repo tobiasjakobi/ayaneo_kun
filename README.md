@@ -21,7 +21,17 @@ The EEPROM is located directly above the APU, see `Picture 1`.
 
 * Content of `/proc/cpuinfo`: [Link](dumps/cpuinfo.txt)
 * Output of the `cpuid` utility by Todd Allen: [Link](dumps/cpuid.txt)
-* Output of the `lspci -v`: [Link](dumps/lspci.txt)
+* Output of `lspci -v`: [Link](dumps/lspci.txt)
+
+The following dumps were created using an Arch Linux install medium with a `6.6.8-arch1-1` kernel.
+
+* Output of `dmesg`: [Link](dumps/dmesg.txt)
+* Output of `ls /sys/devices/platform/`: [Link](dumps/sys_devices_platform.txt)
+* Output of `ls /sys/module/`: [Link](dumps/sys_module.txt)
+
+For each class in `/sys/class` we did a `udevadm info -a -p ${node_name}` for all nodes of this class type. The output was named `${class_type}_${node_name}.txt`.
+
+* Tarball of all outputs: [Link](dumps/udev.tar)
 
 # USB devices
 
