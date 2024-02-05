@@ -17,6 +17,19 @@ The vendor/manufacturer of the EEPROM is `Winbond`, the product name is `W25Q256
 
 The EEPROM is located directly above the APU, see `Picture 1`.
 
+### Recovery
+
+The following hardware is required for recovery.
+
+* CH341A MinProgrammer USB programmer (easily available on Amazon)
+* 1.8V level shifter for programmer
+* alternatively: CH341A v1.7 USB programmer (this one can operate directly with 1.8V output level)
+* DFN8/QFN8/WSON8 probe with 5x6 mm size (larger sizes don't fit the chip)
+
+If you choose the v1.7 USB programmer you don't need the level shifter. Make sure you switch the programmer into 1.8V mode though. The EEPROM is only rated for 1.8V, hence higher voltages may permanently damage it.
+
+Programming of the EEPROM can be done e.g. using [flashrom](https://flashrom.org).
+
 ## Information dumps
 
 * Content of `/proc/cpuinfo`: [Link](dumps/cpuinfo.txt)
