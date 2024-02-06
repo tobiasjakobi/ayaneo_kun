@@ -78,6 +78,14 @@ A workaround consists of immediately opening the event device of controller and 
 
 It is unclear why the firmware implements this behaviour, in particular because it is detrimental to powersaving. Also it is not known if the problem also appears on Windows. The kernel driver on Windows might be implemented differently, e.g. it could request periodic USB transfer regardless if the input device is used or not.
 
+A issue report is open on the [xpad issue tracker](https://github.com/paroj/xpad/issues/256).
+
+### Workaround implementation
+
+A draft implementation of the workaround can be found here: [Link](controller/)
+
+It consists of a UDev rule, a systemd unit template and a C application. The rule automatically starts the systemd unit once the event device of the controller is available. The unit is just a thin wrapper around the application that keeps the event device open until the application is terminated by the unit again.
+
 ## Problematic hardware
 
 CS9711 fingerprint sensor by `Chipsailing Technology Co., Ltd.`
