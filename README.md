@@ -94,9 +94,9 @@ Ryzen AI
 
 Bosch IMU
 
-* currently unclear if the device houses a `BMI160` or a `BMI260`
-* according to ACPI table information the IMU should be a `BMI160` (supported current Linux stable)
-* probing the IMU fails, indicating that the ACPI information might be bogus
+* confirmed by [Derek J. Clark](https://github.com/pastaq) that the devices houses a `BMI260`
+* ACPI table information indicates a `BMI160` (done by the vendor to provide backward compatibility to old Windows driver)
+* probing the IMU with the upstream `bmi160` fails
 * out-of-tree kernel driver for the `BMI260` available: [Link](https://github.com/hhd-dev/bmi260)
 
 CPU core management
