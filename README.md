@@ -86,6 +86,68 @@ A draft implementation of the workaround can be found here: [Link](controller/)
 
 It consists of a UDev rule, a systemd unit template and a C application. The rule automatically starts the systemd unit once the event device of the controller is available. The unit is just a thin wrapper around the application that keeps the event device open until the application is terminated by the unit again.
 
+## AT keyboard
+
+Some of the buttons are exposed through a regular AT keyboard. 
+
+* Power:  
+```
+0xe05e 0xe0de 0xe05e 0xe0de (press+release)
+```
+* Volume Down:  
+```
+0xe02e (press)
+0xe0ae (release)
+```
+
+Volume Up:
+```
+0xe030 (press)
+0xe0b0 (release)
+```
+
+LC:
+```
+0xe01d 0xe05b 0xe03f (press)
+0xe0bf 0xe0db 0xe09d (release)
+```
+
+RC:
+```
+0xe01d 0xe05b 0xe025 (press)
+0xe0a5 0xe0db 0xe09d (release)
+```
+
+Start (upper-right corner of screen):
+```
+0xe01d 0xe05b 0xe040 (press)
+0xe0c0 0xe0db 0xe09d (release)
+```
+
+Ayaneo (lower-right corner of screen):
+```
+0xe01d 0xe05b 0xe065 (press)
+0xe0e5 0xe0db 0xe09d (release)
+```
+
+Hamburger (right of Ayaneo button):
+```
+0xe05b 0x20 (press)
+0xe0db 0xa0 (release)
+```
+
+### Standard keyboard scancodes
+
+Note that most of the buttons generate a multi-scancode sequence.
+
+Some common scancodes are:
+```
+0xe05b = Left_Meta/Windows (press)
+0xe0bb = Left_Meta/Windows (release)
+0xe01d = Right_Ctrl (press)
+0xe09d = Right_Ctrl (release)
+```
+
 ## Problematic hardware
 
 CS9711 fingerprint sensor by `Chipsailing Technology Co., Ltd.`
