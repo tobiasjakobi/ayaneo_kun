@@ -90,11 +90,12 @@ It consists of a UDev rule, a systemd unit template and a C application. The rul
 
 Some of the buttons are exposed through a regular AT keyboard. 
 
-* Power:  
+Power:
 ```
 0xe05e 0xe0de 0xe05e 0xe0de (press+release)
 ```
-* Volume Down:  
+
+Volume Down:
 ```
 0xe02e (press)
 0xe0ae (release)
