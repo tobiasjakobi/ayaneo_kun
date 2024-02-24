@@ -175,3 +175,38 @@ CPU core management
 * core scheduling on latest Linux stable might no be optimal
 * P-state preferred core support is slated for Linux `6.9`: [Link](https://lore.kernel.org/linux-acpi/CAJZ5v0hRk3tME7yeC+1r0RM4-oPPrnSu2=JCsOshBbJp_Nq2Hg@mail.gmail.com/)
 * Core performance boost (CPB) support is currently in review: [Link](https://lore.kernel.org/linux-pm/cover.1706255676.git.perry.yuan@amd.com/)
+
+## UEFI firmware analysis
+
+Analysis was done using this blob: `AB08_Kun_7840U_P6C3L6M0C15_V1.9_EC_V0.0.58_7500_OnlyS4_S011.8_D01_54W_20230809.bin`
+
+Interesting DXE drivers are:
+* `Setup`
+* `AmdPbsSetupDxe`
+
+Interesting VarStores are:
+* Setup (`EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9` with VarStoreId `0xf101`)
+* AMD_PBS_SETUP (`A339D746-F678-49B3-9FC7-54CE0F9DF226` with VarStoreId `0x1`)
+* UsbSupport (`EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9` with VarStoreId `0xb`)
+
+### Setup
+
+Interesting variables:
+* Enable Hibernation (offset `0x32`)
+
+### UsbSupport
+
+Interesting variables:
+* Legacy USB Support (offset `0x1`)
+* XHCI Legacy Support (offset `0x2a`)
+* XHCI Hand-off (offset `0x2b`)
+
+### AMD_PBS_SETUP
+
+Interesting variables:
+* UCSI Support (offset `0x14`)
+* USB4 ACPI _DEP Support (offset `0x465`)
+* Sensor Fusion User Mode Driver (offset `0x3f`)
+* AMD PMF Device Support (offset `0x9d`)
+* S3/Modern Standby Support (offset `0x38`)
+* Modern Standby Type (offset `0x41`)
