@@ -176,6 +176,15 @@ CPU core management
 * P-state preferred core support is slated for Linux `6.9`: [Link](https://lore.kernel.org/linux-acpi/CAJZ5v0hRk3tME7yeC+1r0RM4-oPPrnSu2=JCsOshBbJp_Nq2Hg@mail.gmail.com/)
 * Core performance boost (CPB) support is currently in review: [Link](https://lore.kernel.org/linux-pm/cover.1706255676.git.perry.yuan@amd.com/)
 
+## Pending upstream patches
+
+The following patches are currently pending.
+
+* [drm: panel-orientation-quirks: Add quirk for Aya Neo KUN](https://patchwork.kernel.org/project/dri-devel/patch/20240310220401.895591-1-tjakobi@math.uni-bielefeld.de/)
+* [drm/amd/display: Add MSF panel to DPCD 0x317 patch list](https://patchwork.freedesktop.org/patch/582247/)
+
+THe following patches are not submitted yet: [Link](kernel_patches/)
+
 ## UEFI firmware analysis
 
 Analysis was done using this blob: `AB08_Kun_7840U_P6C3L6M0C15_V1.9_EC_V0.0.58_7500_OnlyS4_S011.8_D01_54W_20230809.bin`
