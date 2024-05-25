@@ -88,7 +88,7 @@ It consists of a UDev rule, a systemd unit template and a C application. The rul
 
 ## AT keyboard
 
-Some of the buttons are exposed through a regular AT keyboard. 
+Some of the buttons are exposed through a regular AT keyboard.
 
 Power:
 ```
@@ -173,15 +173,14 @@ Bosch IMU
 CPU core management
 
 * core scheduling on latest Linux stable might no be optimal
-* P-state preferred core support is slated for Linux `6.9`: [Link](https://lore.kernel.org/linux-acpi/CAJZ5v0hRk3tME7yeC+1r0RM4-oPPrnSu2=JCsOshBbJp_Nq2Hg@mail.gmail.com/)
-* Core performance boost (CPB) support is currently in review: [Link](https://lore.kernel.org/linux-pm/cover.1706255676.git.perry.yuan@amd.com/)
+* Fast CPPC for Zen 4 is currently in review: [Link](https://lore.kernel.org/linux-pm/20240428091133.592333-1-Xiaojian.Du@amd.com/)
+* Core performance boost (CPB) support is currently in review (v10): [Link](https://lore.kernel.org/linux-pm/cover.1715152592.git.perry.yuan@amd.com/)
 
 ## Pending upstream patches
 
 The following patches are currently pending.
 
 * [drm: panel-orientation-quirks: Add quirk for Aya Neo KUN](https://patchwork.kernel.org/project/dri-devel/patch/20240310220401.895591-1-tjakobi@math.uni-bielefeld.de/)
-* [drm/amd/display: Add MSF panel to DPCD 0x317 patch list](https://patchwork.freedesktop.org/patch/582247/)
 
 THe following patches are not submitted yet: [Link](kernel_patches/)
 
