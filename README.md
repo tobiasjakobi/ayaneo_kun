@@ -173,7 +173,7 @@ Bosch IMU
 CPU core management
 
 * core scheduling on latest Linux stable might no be optimal
-* Fast CPPC for Zen 4 is currently in review: [Link](https://lore.kernel.org/linux-pm/20240428091133.592333-1-Xiaojian.Du@amd.com/)
+* Fast CPPC for Zen 4 is currently in review (v4): [Link](https://lore.kernel.org/linux-pm/e717feea3df0a178a9951491040a76c79a00556c.1716649578.git.Xiaojian.Du@amd.com/)
 * Core performance boost (CPB) support is currently in review (v10): [Link](https://lore.kernel.org/linux-pm/cover.1715152592.git.perry.yuan@amd.com/)
 
 ## Pending upstream patches
