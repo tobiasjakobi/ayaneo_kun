@@ -176,13 +176,15 @@ CPU core management
 * Fast CPPC for Zen 4 is currently in review (v4): [Link](https://lore.kernel.org/linux-pm/e717feea3df0a178a9951491040a76c79a00556c.1716649578.git.Xiaojian.Du@amd.com/)
 * Core performance boost (CPB) support is currently in review (v10): [Link](https://lore.kernel.org/linux-pm/cover.1715152592.git.perry.yuan@amd.com/)
 
+Also see [this report](https://github.com/ChimeraOS/chimeraos/issues/831) on the ChimeraOS issue tracker for additional information.
+
 ## Pending upstream patches
 
 The following patches are currently pending.
 
 * [drm: panel-orientation-quirks: Add quirk for Aya Neo KUN](https://patchwork.kernel.org/project/dri-devel/patch/20240310220401.895591-1-tjakobi@math.uni-bielefeld.de/)
 
-THe following patches are not submitted yet: [Link](kernel_patches/)
+The following patches are not submitted yet: [Link](kernel_patches/)
 
 ## UEFI firmware analysis
 
