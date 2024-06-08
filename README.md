@@ -182,9 +182,11 @@ Also see [this report](https://github.com/ChimeraOS/chimeraos/issues/831) on the
 
 The following patches are currently pending.
 
+Kernel:
 * [drm: panel-orientation-quirks: Add quirk for Aya Neo KUN](https://patchwork.kernel.org/project/dri-devel/patch/20240310220401.895591-1-tjakobi@math.uni-bielefeld.de/)
 * [Input: i8042 - add Ayaneo Kun to i8042 quirk table](https://patchwork.kernel.org/project/linux-input/patch/20240531190100.3874731-1-tjakobi@math.uni-bielefeld.de/)
 
+systemd:
 * [hwdb: add keyboard mappings for the Ayaneo Kun face buttons](https://github.com/systemd/systemd/pull/33253)
 
 The following kernel patches are not submitted yet: [Link](kernel_patches/)
