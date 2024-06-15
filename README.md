@@ -149,6 +149,34 @@ Some common scancodes are:
 0xe09d = Right_Ctrl (release)
 ```
 
+## Touchpad
+
+The touchpad is exposed as USB device. The device is not directly connected to a root hub, but through a USB hub IC by `Terminus Technology Inc.` (vendor ID of the hub is `1a40`, and product ID is `0101`). The hub usually is device 4 on bus 1 (bus of the first root hub).
+
+The vendor ID of the touchpad is `0483` which indicates a hardware based on a microcontroller by `STMicroelectronics`. The product ID is `52a4`, which was probably chosen by Ayaneo. The device exposes three USB HID interfaces.
+
+### Firmware upgrade
+
+Analysis of the content of the firmware upgrade package shows several interesting files.
+
+* `SoundModeFirmware.dfu`
+* `dfu-util.exe`
+* `libusb-1.0.dll`
+* `lsusb.exe`
+
+Hence it is very likely that the firmware is upgraded via DFU. However there is no USB interface exposing DFU. Since STM is involved, the device might use the propriertary `DfuSe` protocol. This seems plausible as this protocol allows switching between HID and DFU mode using a vendor specific HID detach feature. See these links for reference.
+
+* [UM0412](https://www.st.com/resource/en/user_manual/um0412-getting-started-with-dfuse-usb-device-firmware-upgrade-stmicroelectronics-extension-stmicroelectronics.pdf)
+* [DfuSe USB device firmware upgrade](https://www.st.com/en/development-tools/stsw-stm32080.html)
+* [DfuSE sourcecode dump](https://github.com/Gadgetoid/DfuSE)
+
+You can find a dump (using `hid-decode` from the `hid-tools` package) of the HID report descriptors here: [Link](dumps/touchpad_report_descs.txt)
+
+Sadly the detach feature `0x0055` is not there. Further analysis is needed. Some ideas:
+
+* check if upgrade functions under Wine and trace USB traffic using `usbmon`
+* if that doesn't work, passthrough the Terminus hub to a Windows VM and trace the traffic there
+
 ## Problematic hardware
 
 CS9711 fingerprint sensor by `Chipsailing Technology Co., Ltd.`

@@ -1,0 +1,111 @@
+USB interface 0
+$ hid-decode /sys/bus/hid/devices/0003\:0483\:52A4.0007/report_descriptor
+# device 0:0
+# 0x05, 0x01,                    // Usage Page (Generic Desktop)        0
+# 0x09, 0x02,                    // Usage (Mouse)                       2
+# 0xa1, 0x01,                    // Collection (Application)            4
+# 0x09, 0x01,                    //  Usage (Pointer)                    6
+# 0xa1, 0x00,                    //  Collection (Physical)              8
+# 0x05, 0x09,                    //   Usage Page (Button)               10
+# 0x19, 0x01,                    //   Usage Minimum (1)                 12
+# 0x29, 0x03,                    //   Usage Maximum (3)                 14
+# 0x15, 0x00,                    //   Logical Minimum (0)               16
+# 0x25, 0x01,                    //   Logical Maximum (1)               18
+# 0x95, 0x03,                    //   Report Count (3)                  20
+# 0x75, 0x01,                    //   Report Size (1)                   22
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              24
+# 0x95, 0x01,                    //   Report Count (1)                  26
+# 0x75, 0x05,                    //   Report Size (5)                   28
+# 0x81, 0x01,                    //   Input (Cnst,Arr,Abs)              30
+# 0x05, 0x01,                    //   Usage Page (Generic Desktop)      32
+# 0x09, 0x30,                    //   Usage (X)                         34
+# 0x09, 0x31,                    //   Usage (Y)                         36
+# 0x09, 0x38,                    //   Usage (Wheel)                     38
+# 0x15, 0x81,                    //   Logical Minimum (-127)            40
+# 0x25, 0x7f,                    //   Logical Maximum (127)             42
+# 0x75, 0x08,                    //   Report Size (8)                   44
+# 0x95, 0x03,                    //   Report Count (3)                  46
+# 0x81, 0x06,                    //   Input (Data,Var,Rel)              48
+# 0xc0,                          //  End Collection                     50
+# 0x09, 0x3c,                    //  Usage (Motion)                     51
+# 0x05, 0xff,                    //  Usage Page (Vendor Usage Page 0xff) 53
+# 0x09, 0x01,                    //  Usage (Vendor Usage 0x01)          55
+# 0x15, 0x00,                    //  Logical Minimum (0)                57
+# 0x25, 0x01,                    //  Logical Maximum (1)                59
+# 0x75, 0x01,                    //  Report Size (1)                    61
+# 0x95, 0x02,                    //  Report Count (2)                   63
+# 0xb1, 0x22,                    //  Feature (Data,Var,Abs,NoPref)      65
+# 0x75, 0x06,                    //  Report Size (6)                    67
+# 0x95, 0x01,                    //  Report Count (1)                   69
+# 0xb1, 0x01,                    //  Feature (Cnst,Arr,Abs)             71
+# 0xc0,                          // End Collection                      73
+#
+R: 74 05 01 09 02 a1 01 09 01 a1 00 05 09 19 01 29 03 15 00 25 01 95 03 75 01 81 02 95 01 75 05 81 01 05 01 09 30 09 31 09 38 15 81 25 7f 75 08 95 03 81 06 c0 09 3c 05 ff 09 01 15 00 25 01 75 01 95 02 b1 22 75 06 95 01 b1 01 c0
+N: device 0:0
+I: 3 0001 0001
+
+
+USB interface 1
+$ hid-decode /sys/bus/hid/devices/0003\:0483\:52A4.0008/report_descriptor
+# device 0:0
+# 0x05, 0x01,                    // Usage Page (Generic Desktop)        0
+# 0x09, 0x06,                    // Usage (Keyboard)                    2
+# 0xa1, 0x01,                    // Collection (Application)            4
+# 0x05, 0x07,                    //  Usage Page (Keyboard)              6
+# 0x19, 0xe0,                    //  Usage Minimum (224)                8
+# 0x29, 0xe7,                    //  Usage Maximum (231)                10
+# 0x15, 0x00,                    //  Logical Minimum (0)                12
+# 0x25, 0x01,                    //  Logical Maximum (1)                14
+# 0x75, 0x01,                    //  Report Size (1)                    16
+# 0x95, 0x08,                    //  Report Count (8)                   18
+# 0x81, 0x02,                    //  Input (Data,Var,Abs)               20
+# 0x95, 0x01,                    //  Report Count (1)                   22
+# 0x75, 0x08,                    //  Report Size (8)                    24
+# 0x81, 0x03,                    //  Input (Cnst,Var,Abs)               26
+# 0x95, 0x05,                    //  Report Count (5)                   28
+# 0x75, 0x01,                    //  Report Size (1)                    30
+# 0x05, 0x08,                    //  Usage Page (LEDs)                  32
+# 0x19, 0x01,                    //  Usage Minimum (1)                  34
+# 0x29, 0x05,                    //  Usage Maximum (5)                  36
+# 0x91, 0x02,                    //  Output (Data,Var,Abs)              38
+# 0x95, 0x01,                    //  Report Count (1)                   40
+# 0x75, 0x03,                    //  Report Size (3)                    42
+# 0x91, 0x03,                    //  Output (Cnst,Var,Abs)              44
+# 0x95, 0x06,                    //  Report Count (6)                   46
+# 0x75, 0x08,                    //  Report Size (8)                    48
+# 0x15, 0x00,                    //  Logical Minimum (0)                50
+# 0x25, 0xff,                    //  Logical Maximum (255)              52
+# 0x05, 0x07,                    //  Usage Page (Keyboard)              54
+# 0x19, 0x00,                    //  Usage Minimum (0)                  56
+# 0x29, 0x65,                    //  Usage Maximum (101)                58
+# 0x81, 0x00,                    //  Input (Data,Arr,Abs)               60
+# 0xc0,                          // End Collection                      62
+#
+R: 63 05 01 09 06 a1 01 05 07 19 e0 29 e7 15 00 25 01 75 01 95 08 81 02 95 01 75 08 81 03 95 05 75 01 05 08 19 01 29 05 91 02 95 01 75 03 91 03 95 06 75 08 15 00 25 ff 05 07 19 00 29 65 81 00 c0
+N: device 0:0
+I: 3 0001 0001
+
+
+USB interface 2
+$ hid-decode /sys/bus/hid/devices/0003\:0483\:52A4.0009/report_descriptor
+# device 0:0
+# 0x06, 0x00, 0xff,              // Usage Page (Vendor Defined Page 1)  0
+# 0x09, 0x01,                    // Usage (Vendor Usage 1)              3
+# 0xa1, 0x01,                    // Collection (Application)            5
+# 0x15, 0x00,                    //  Logical Minimum (0)                7
+# 0x26, 0xff, 0x00,              //  Logical Maximum (255)              9
+# 0x75, 0x08,                    //  Report Size (8)                    12
+# 0x95, 0x40,                    //  Report Count (64)                  14
+# 0x09, 0x01,                    //  Usage (Vendor Usage 1)             16
+# 0x81, 0x40,                    //  Input (Data,Arr,Abs,Null)          18
+# 0x95, 0x40,                    //  Report Count (64)                  20
+# 0x09, 0x01,                    //  Usage (Vendor Usage 1)             22
+# 0x91, 0x40,                    //  Output (Data,Arr,Abs,Null)         24
+# 0x95, 0x01,                    //  Report Count (1)                   26
+# 0x09, 0x01,                    //  Usage (Vendor Usage 1)             28
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             30
+# 0xc0,                          // End Collection                      32
+#
+R: 33 06 00 ff 09 01 a1 01 15 00 26 ff 00 75 08 95 40 09 01 81 40 95 40 09 01 91 40 95 01 09 01 b1 02 c0
+N: device 0:0
+I: 3 0001 0001
