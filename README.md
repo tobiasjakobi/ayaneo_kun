@@ -170,6 +170,14 @@ Bosch IMU
 * probing the IMU with the upstream `bmi160` fails
 * out-of-tree kernel driver for the `BMI260` available: [Link](https://github.com/hhd-dev/bmi260)
 
+Audio support
+
+* ACPI tables indicate that device includes a amplifier by the `Shanghai Awinic Technology Co., Ltd.` (the string `AWDZ8830` is present in the tables)
+* no upstream kernel driver is available
+* downstream driver can be found here: [Link](https://github.com/CVMagic/linux)
+* author seems to be an Awinic developer
+* most likely we are dealing with a [AW88308QNR](https://www.awinic.com/en/productDetail/AW88308QNR) (if the ACPI string is any indication)
+
 CPU core management
 
 * core scheduling on latest Linux stable might no be optimal
