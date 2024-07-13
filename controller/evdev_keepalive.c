@@ -9,7 +9,7 @@
 #include <string.h>
 #include <unistd.h>
 
-void null_action(int signal, siginfo_t *info, void *data) {
+static void null_action(int signal, siginfo_t *info, void *data) {
     /* Nothing here. */
 }
 
