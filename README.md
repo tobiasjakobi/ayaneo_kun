@@ -182,14 +182,15 @@ Sadly the detach feature `0x0055` is not there. Further analysis is needed. Some
 CS9711 fingerprint sensor by `Chipsailing Technology Co., Ltd.`
 
 * USB vendor ID `2541`, and product ID `0236`
-* no Linux kernel or userspace driver available
-* no reverse engineering projects known
+* no upstream userspace driver available at the moment
+* reverse engineering project on the libfprint issue tracker: [Link](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/610)
 
 Ryzen AI
 
 * AI accelerator integrated in the AMD 7840U APU
 * Driver stack in development: [Link](https://github.com/amd/xdna-driver)
-* Depends on IOMMU SVA patches: [Link](https://lore.kernel.org/linux-iommu/20231016104351.5749-1-vasant.hegde@amd.com/)
+* Kernel driver `amdxdna` submitted: [Link](https://lore.kernel.org/dri-devel/20240719175128.2257677-1-lizhi.hou@amd.com/)
+* Depends on IOMMU SVA patches that landed in `v6.10`: [Link](https://lore.kernel.org/all/20240418103400.6229-1-vasant.hegde@amd.com/)
 
 Bosch IMU
 
@@ -200,20 +201,22 @@ Bosch IMU
 
 Audio support
 
-* ACPI tables indicate that device includes a amplifier by the `Shanghai Awinic Technology Co., Ltd.` (the string `AWDZ8830` is present in the tables)
+* ACPI tables indicate that device includes a amplifier by `Shanghai Awinic Technology Co., Ltd.` (the string `AWDZ8830` is present in the tables)
 * no upstream kernel driver is available
 * downstream driver can be found here: [Link](https://github.com/CVMagic/linux)
 * author seems to be an Awinic developer
 * most likely we are dealing with a [AW88308QNR](https://www.awinic.com/en/productDetail/AW88308QNR) (if the ACPI string is any indication)
+* driver requires proprietary firmware (which poses a distribution problem)
 
 CPU core management
 
 * core scheduling on latest Linux stable might no be optimal
-* Fast CPPC for Zen 4 is currently in review (v4): [Link](https://lore.kernel.org/linux-pm/e717feea3df0a178a9951491040a76c79a00556c.1716649578.git.Xiaojian.Du@amd.com/)
-* Core performance boost (CPB) support is currently in review (v10): [Link](https://lore.kernel.org/linux-pm/cover.1715152592.git.perry.yuan@amd.com/)
+* Fast CPPC for Zen 4 (v4) was merged with the `v6.11` merge window: [Link](https://lore.kernel.org/linux-pm/e717feea3df0a178a9951491040a76c79a00556c.1716649578.git.Xiaojian.Du@amd.com/)
+* Core performance boost (CPB) support (v15) was merged with the `v6.11` merge window: [Link](https://lore.kernel.org/all/20240626042733.3747-1-mario.limonciello@amd.com/)
 
 Miscellaneous
 
+* backlight ([commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7c0ac603383a03b8725fb6e254b8a883129af188) was merged with the `v6.11` merge window)
 * LED control
 * fan control
 * touchpad firmware update
