@@ -202,10 +202,12 @@ Bosch IMU
 Audio support
 
 * ACPI tables indicate that device includes a amplifier by `Shanghai Awinic Technology Co., Ltd.` (the string `AWDZ8830` is present in the tables)
+* two amplifiers (model `AW87559`) are attached to the second DesignWare I2C adapter (ACPI node `AMDI0010:01`), addresses are `0x58` and `0x5b`
+* `AW87559` uses standard SMBus protocol, identifies itself as `0x5a` as IDCODE on register `0x0`
+* datasheet available here: [Link](https://www.awinic.com/en/productDetail/AW87559FCR)
 * no upstream kernel driver is available
-* downstream driver can be found here: [Link](https://github.com/CVMagic/linux)
-* author seems to be an Awinic developer
-* most likely we are dealing with a [AW88308QNR](https://www.awinic.com/en/productDetail/AW88308QNR) (if the ACPI string is any indication)
+* driver can be found in downstream Rockchip kernel: [Rockchip](https://github.com/rockchip-linux/kernel/commit/e9a70c503e213fb0fd319510d2caf57f1f71b20c) (only implements DeviceTree probing)
+* modified driver (with ACPI probing) can be found here: [Link](https://github.com/CVMagic/linux)
 * driver requires proprietary firmware (which poses a distribution problem)
 
 CPU core management
