@@ -264,4 +264,14 @@ Interesting variables:
 * Sensor Fusion User Mode Driver (offset `0x3f`)
 * AMD PMF Device Support (offset `0x9d`)
 * S3/Modern Standby Support (offset `0x38`)
+  * S3 Enable (value `0`, default)
+  * Modern Standby (value `1`)
 * Modern Standby Type (offset `0x41`)
+  * Modern Standby + S0i2 (value `0`)
+  * Modern Standby + S0i3 (value `1`, default)
+  * Modern Standby + S0i2 + S0i3 (value `2`)
+  * S0i3 with workaround (value `3`)
+
+### Other firmware versions
+
+The latest firmware blob `AB08_Kun_7840U_P6C3L6M0C15_V2.18_S20_AC_EC_V0.0.59_6400_OnlyS4_MS_Pro_20240326.bin` seems to use the same offsets.
