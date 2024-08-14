@@ -231,6 +231,12 @@ No patches are currently pending.
 
 The following kernel patches are not submitted yet: [Link](kernel_patches/)
 
+## ACPI tables
+
+A dissassembled dump of the non-data ACPI tables can be found here: [Link](acpi_tables/)
+
+Dump was done using the firmware blob `AB08_Kun_7840U_P6C3L6M0C15_V2.18_S20_AC_EC_V0.0.59_6400_OnlyS4_MS_Pro_20240326.bin`.
+
 ## UEFI firmware analysis
 
 Analysis was done using this blob: `AB08_Kun_7840U_P6C3L6M0C15_V1.9_EC_V0.0.58_7500_OnlyS4_S011.8_D01_54W_20230809.bin`
