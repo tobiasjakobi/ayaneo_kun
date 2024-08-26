@@ -82,7 +82,12 @@ A issue report is open on the [xpad issue tracker](https://github.com/paroj/xpad
 
 ### Workaround implementation
 
-A draft implementation of the workaround can be found here: [Link](controller/)
+A draft implementation of the workaround can be found here: [Link](https://github.com/tobiasjakobi/tjtools)
+
+Relevant files are:
+* `src/evdev_keepalive.c`
+* `systemd/xbox360-config@.service`
+* `udev/70-gamepad-controller.rules`
 
 It consists of a UDev rule, a systemd unit template and a C application. The rule automatically starts the systemd unit once the event device of the controller is available. The unit is just a thin wrapper around the application that keeps the event device open until the application is terminated by the unit again.
 
