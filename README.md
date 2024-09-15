@@ -194,7 +194,7 @@ Ryzen AI
 
 * AI accelerator integrated in the AMD 7840U APU
 * Driver stack in development: [Link](https://github.com/amd/xdna-driver)
-* Kernel driver `amdxdna` submitted: [Link](https://lore.kernel.org/dri-devel/20240719175128.2257677-1-lizhi.hou@amd.com/)
+* Kernel driver `amdxdna` submitted: [Link](https://lore.kernel.org/dri-devel/20240911180604.1834434-1-lizhi.hou@amd.com/)
 * Depends on IOMMU SVA patches that landed in `v6.10`: [Link](https://lore.kernel.org/all/20240418103400.6229-1-vasant.hegde@amd.com/)
 
 Bosch IMU
