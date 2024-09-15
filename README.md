@@ -215,15 +215,8 @@ Audio support
 * modified driver (with ACPI probing) can be found here: [Link](https://github.com/CVMagic/linux)
 * driver requires proprietary firmware (which poses a distribution problem)
 
-CPU core management
-
-* core scheduling on latest Linux stable might no be optimal
-* Fast CPPC for Zen 4 (v4) was merged with the `v6.11` merge window: [Link](https://lore.kernel.org/linux-pm/e717feea3df0a178a9951491040a76c79a00556c.1716649578.git.Xiaojian.Du@amd.com/)
-* Core performance boost (CPB) support (v15) was merged with the `v6.11` merge window: [Link](https://lore.kernel.org/all/20240626042733.3747-1-mario.limonciello@amd.com/)
-
 Miscellaneous
 
-* backlight ([commit](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7c0ac603383a03b8725fb6e254b8a883129af188) was merged with the `v6.11` merge window)
 * LED control
 * fan control
 * touchpad firmware update
