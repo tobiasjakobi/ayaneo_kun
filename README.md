@@ -194,15 +194,15 @@ Ryzen AI
 
 * AI accelerator integrated in the AMD 7840U APU
 * Driver stack in development: [Link](https://github.com/amd/xdna-driver)
-* Kernel driver `amdxdna` submitted: [Link](https://lore.kernel.org/dri-devel/20240911180604.1834434-1-lizhi.hou@amd.com/)
-* Depends on IOMMU SVA patches that landed in `v6.10`: [Link](https://lore.kernel.org/all/20240418103400.6229-1-vasant.hegde@amd.com/)
+* kernel driver was merged in `drm-misc-next`: [Link](https://cgit.freedesktop.org/drm/drm-misc/tree/drivers/accel/amdxdna)
+* most likely part of the `v6.14` kernel release
 
 Bosch IMU
 
 * confirmed by [Derek J. Clark](https://github.com/pastaq) that the devices houses a `BMI260`
 * ACPI table information indicates a `BMI160` (done by the vendor to provide backward compatibility to old Windows driver)
-* probing the IMU with the upstream `bmi160` fails
-* out-of-tree kernel driver for the `BMI260` available: [Link](https://github.com/hhd-dev/bmi260)
+* support for the `BMI260` was merged in the `v6.13-rc1` kernel: [Link](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f35f3c832eb58862ab9b62f8e24d1d8864f9f205)
+* is going to be part of the `v6.13` kernel release
 
 Audio support
 
@@ -218,7 +218,6 @@ Audio support
 Miscellaneous
 
 * LED control
-* fan control
 * touchpad firmware update
 
 Also see [this report](https://github.com/ChimeraOS/chimeraos/issues/831) on the ChimeraOS issue tracker for additional information.
