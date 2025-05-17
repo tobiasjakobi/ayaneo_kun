@@ -190,20 +190,6 @@ CS9711 fingerprint sensor by `Chipsailing Technology Co., Ltd.`
 * no upstream userspace driver available at the moment
 * reverse engineering project on the libfprint issue tracker: [Link](https://gitlab.freedesktop.org/libfprint/libfprint/-/issues/610)
 
-Ryzen AI
-
-* AI accelerator integrated in the AMD 7840U APU
-* Driver stack in development: [Link](https://github.com/amd/xdna-driver)
-* kernel driver was merged in `drm-misc-next`: [Link](https://cgit.freedesktop.org/drm/drm-misc/tree/drivers/accel/amdxdna)
-* most likely part of the `v6.14` kernel release
-
-Bosch IMU
-
-* confirmed by [Derek J. Clark](https://github.com/pastaq) that the devices houses a `BMI260`
-* ACPI table information indicates a `BMI160` (done by the vendor to provide backward compatibility to old Windows driver)
-* support for the `BMI260` was merged in the `v6.13-rc1` kernel: [Link](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f35f3c832eb58862ab9b62f8e24d1d8864f9f205)
-* is going to be part of the `v6.13` kernel release
-
 Audio support
 
 * ACPI tables indicate that device includes a amplifier by `Shanghai Awinic Technology Co., Ltd.` (the string `AWDZ8830` is present in the tables)
@@ -219,8 +205,11 @@ Miscellaneous
 
 * LED control
 * touchpad firmware update
+* charge bypass (feature of the EC)
 
 Also see [this report](https://github.com/ChimeraOS/chimeraos/issues/831) on the ChimeraOS issue tracker for additional information.
+
+This overview assumes a `v6.14.x` upstream Linux kernel.
 
 ## Pending upstream patches
 
