@@ -11,6 +11,14 @@ Some pictures of the Kun's circuit board.
 * [Picture 5](https://www.math.uni-bielefeld.de/~tjakobi/ayaneo_kun/ayaneo_kun_circuit_board_4.jpeg)
 * [Picture 6](https://www.math.uni-bielefeld.de/~tjakobi/ayaneo_kun/ayaneo_kun_circuit_board_5.jpeg)
 
+## Other interesting ICs
+
+Some other interesting ICs on the PCB which are not visible in the pictures above.
+
+* `MP2845A` digital power controller by `Monolitic Power Systems, Inc.` (QFN-56 packaging)
+* `CYPD6227-96BZXI` USB-C port controller by `Infinion Technologies AG` (BGA-96 packaging, formely manufactured by `Cypress Semiconductor Corporation`)
+* `IT5571VG` embedded controller / Super-IO chipset by `ITE Technologies Inc.` (packaging unknown)
+
 ## Firmware EEPROM
 
 The vendor/manufacturer of the EEPROM is `Winbond`, the product name is `W25Q256JWPQ`. Size is `32MiB` and interface is `SPI`.
